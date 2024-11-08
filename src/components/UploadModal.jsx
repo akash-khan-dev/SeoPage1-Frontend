@@ -23,7 +23,7 @@ const UploadModal = ({
     if (fileState.length > 0) {
       setShow(true);
       dispatch(uploadFIle([...file, fileState]));
-      localStorage.setItem("file", JSON.stringify(fileState));
+      localStorage.setItem("file", JSON.stringify([...file, fileState]));
       setFileState([]);
 
       // for send data backend
